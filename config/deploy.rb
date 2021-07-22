@@ -31,7 +31,6 @@ set :disallow_pushing, true
 
 ## Linked Files & Directories (Default None):
 append :linked_files, 'config/database.yml', 'config/master.key'
-
 set :linked_dirs, %w[log tmp/pids tmp/cache tmp/async_import tmp/sockets public/system storage]
 
 namespace :deploy do

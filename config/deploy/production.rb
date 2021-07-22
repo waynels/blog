@@ -49,12 +49,12 @@ set :branch, 'master'
 #    forward_agent: false,
 #    auth_methods: %w(password)
 #  }
-# set :ssh_options, {
-#   keys: %w(/Users/shuai/.ssh/id_rsa),
-#   # port: 3000
-#   # forward_agent: false,
-#   # auth_methods: %w(password)
-# }
+set :ssh_options, {
+  keys: %w(/Users/shuai/.ssh/id_rsa),
+  # port: 3000
+  # forward_agent: false,
+  # auth_methods: %w(password)
+}
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
