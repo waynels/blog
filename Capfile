@@ -32,7 +32,11 @@ require 'capistrano/rvm'
 require 'capistrano/bundler'
 require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
-require 'capistrano/passenger'
+require 'capistrano/puma'
+install_plugin Capistrano::Puma  # Default puma tasks
+install_plugin Capistrano::Puma::Workers
+require 'capistrano-db-tasks'
+
 set :rvm_type, :user                     # Defaults to: :auto
 set :rvm_ruby_version, '2.7.2-p137'      # Defaults to: 'default'
 

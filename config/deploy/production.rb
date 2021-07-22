@@ -8,6 +8,10 @@
 # server "db.example.com", user: "deploy", roles: %w{db}
 server "47.92.93.227", user: "www", roles: %w{app db web}
 
+set :rbenv_ruby, '2.7.2'
+set :rails_env, 'production'
+set :branch, 'master'
+
 # role-based syntax
 # ==================
 
@@ -45,12 +49,12 @@ server "47.92.93.227", user: "www", roles: %w{app db web}
 #    forward_agent: false,
 #    auth_methods: %w(password)
 #  }
-set :ssh_options, {
-  keys: %w(/Users/shuai/.ssh/id_rsa),
-  port: xxx
-  # forward_agent: false,
-  # auth_methods: %w(password)
-}
+# set :ssh_options, {
+#   keys: %w(/Users/shuai/.ssh/id_rsa),
+#   # port: 3000
+#   # forward_agent: false,
+#   # auth_methods: %w(password)
+# }
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
