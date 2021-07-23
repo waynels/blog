@@ -30,7 +30,7 @@ set :disallow_pushing, true
 # set :assets_dependencies, %w(app/assets app/frontend lib/assets vendor/assets config/webpack)
 
 ## Linked Files & Directories (Default None):
-append :linked_files, 'config/database.yml', 'config/master.key'
+append :linked_files, 'config/database.yml', 'config/master.key', 'package.json', 'db/production.sqlite3'
 set :linked_dirs, %w[log tmp/pids tmp/cache tmp/async_import tmp/sockets public/system storage]
 
 namespace :deploy do

@@ -34,7 +34,8 @@ require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
 require 'capistrano/puma'
 install_plugin Capistrano::Puma  # Default puma tasks
-install_plugin Capistrano::Puma::Workers
+install_plugin Capistrano::Puma::Workers  # if you want to control the workers (in cluster mode)
+install_plugin Capistrano::Puma::Nginx   # if you want to upload a nginx site template
 require 'capistrano-db-tasks'
 
 set :rvm_type, :user                     # Defaults to: :auto
